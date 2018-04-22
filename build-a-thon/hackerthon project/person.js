@@ -7,6 +7,8 @@ var passport = require("passport");
 //var LocalStrategy  = require("passport-local");
 var passportLocalMongoose  = require("passport-local-mongoose");
 var Problem = require("./problem");
+var Comment = require("./comment");
+var doneDB = require("./person_problem");
 //mongoose.connect("mongodb://localhost/shopzone");
 app.use(bodyParser.urlencoded({extended : true}));
 app.use('', express.static(path.join(__dirname + '')));
@@ -20,11 +22,6 @@ var PersonSchema = new mongoose.Schema ({
    con_number : Number,
    city : String ,
    address : String,
-   problem : [{
-   	  name : String,
-   	  image : String,
-   	  description : String
-   }]
 });
 
 PersonSchema.plugin(passportLocalMongoose);

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<title>
+Geotagging</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!--forupload-->
+
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    
+<style type="text/css">
+        
+/* layout.css Style */
+
+.upload-drop-zone 
+{
+  
+height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+
+}
+
+
+/* skin.css Style*/
+
+.upload-drop-zone 
+{
+  
+color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+
+}
+
+.upload-drop-zone.drop 
+{
+  
+color: #222;
+  border-color: #222;
+
+}
+    
+</style>
+    
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+</script>
+
+
+
+
+<!-- end here-->
+
+
+
+
+
+
+
+
+
+
+<style>
+
+body{
+    
+ background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("img/bac.jpg");
+ 
+min-height:500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+.head .head1 .abc{
+    font-family: myFirstFont;
+}
+
+
+
+</style>
+<body >
+<br />
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark container">
+  <!-- Brand -->
+  <a class="navbar-brand" href="../newlook.html">Geotag</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+
+
+<!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav navbar-right">
+      <li class="nav-item">
+          <a class="nav-link" href="#"><span class="glyphicon glyphicon-home"> Home</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><span class="glyphicon glyphicon-phone"> Contact us</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><span class="glyphicon glyphicon-th"> Menu1</a>
+      </li>
+    </ul>
+  </div>
+</nav> 
+<!--header is here-->
+<center>
+ 
+    <h1 class="head" style="color:lightgreen;">Geo <span style="color:lightgreen;">T</span>aging</h1>
+    <hr  style="margin:auto;width:40%;border-color:silver;">
+    <p class="head1" style="color:lightgreen;font-size:20px;">Tag your own geo photos here</p>
+</center>
+<!--heder ends here-->
+
+
+
+<!-- menu starts here-->
+<br />
+<!-- menu ends here-->
+
+
+
+
+<!--map is here-->
+<div class="container">
+<center><p class="abc" style="color:silver;font-size:30px;">1.Choose location in Google Map</p></center>
+<div id="googleMap" style="width:100%;height:500px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+</div>
+<!--map ends here-->
+
+
+
+
+
+
+
+<br />
+<!--upload pics-->
+<div class="container">
+<center><p class="abc" style="color:silver;font-size:30px">2.Upload pics here</p></center>
+</div>
+<br />
+<br />
+
+<div class="container">
+      
+<div class="panel panel-default">
+        
+<div class="panel-heading"><strong>2.Upload Files</strong> 
+<small>(your own geo files) </small></div>
+        
+<div class="panel-body">
+
+          
+<!-- Standar Form -->
+          
+<h4>Select files from your computer</h4>
+          
+<form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+            
+<div class="form-inline">
+              
+<div class="form-group">
+                
+<input type="file" name="files[]" id="js-upload-files" multiple>
+              
+</div>
+              
+<button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+
+</div>
+          
+</form>
+
+          
+<!-- Drop Zone -->
+          
+<h4>Or drag and drop files below</h4>
+          
+<div class="upload-drop-zone" id="drop-zone">
+            Just drag and drop files here
+          </div>
+
+
+<!-- Progress Bar -->
+          
+<div class="progress">
+            
+<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+              
+<span class="sr-only">60% Complete</span>
+            
+</div>
+          
+</div>
+
+          
+<!-- Upload Finished -->
+          
+<div class="js-upload-finished">
+            
+<h3>Processed files</h3>
+            
+<div class="list-group">
+              
+<a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+              
+<a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+            
+</div>
+          
+</div>
+        
+</div>
+      
+</div>
+    
+</div> 
+<!-- /container -->
+
+<script type="text/javascript">
+
++ function($) 
+{
+    
+'use strict';
+
+    
+// UPLOAD CLASS DEFINITION
+    // 
+======================
+
+    
+var dropZone = document.getElementById('drop-zone');
+    
+var uploadForm = document.getElementById('js-upload-form');
+
+    
+var startUpload = function(files) 
+{
+        
+console.log(files)
+    
+}
+
+    
+uploadForm.addEventListener('submit', function(e) 
+{
+        
+var uploadFiles = document.getElementById('js-upload-files').files;
+        
+e.preventDefault()
+
+        
+startUpload(uploadFiles)
+    
+})
+
+    
+dropZone.ondrop = function(e) {
+        
+e.preventDefault();
+        
+this.className = 'upload-drop-zone';
+
+        
+startUpload(e.dataTransfer.files)
+    
+}
+
+    
+dropZone.ondragover = function() 
+{
+        
+this.className = 'upload-drop-zone drop';
+        
+return false;
+    
+}
+
+    
+dropZone.ondragleave = function() 
+{
+        
+this.className = 'upload-drop-zone';
+        
+return false;
+    
+}
+
+}
+(jQuery);
+
+</script>
+
+
+<!--upload endes here-->
+
+
+    	                				
+<!-- sugestions starts here-->
+
+<div class="container">
+<center><p class="abc" style="color:silver;font-size:30px">Need help?</p></center>
+  <div class="jumbotron " style="/*background:silver;*/box-border:dotted;">
+   <center> <h2>How to geotag photos: </h2> </center>
+<ul>    
+    <li><h4> Upload all type of images </h4></li>
+      <li><h4> Existing geotags are shown on the map</h4> </li>
+       <li> <h4> Set the marker or enter the latitude and longitude manually </h4></li>
+         <li><h4> upload images based on location</h4></li>
+          <li> <h4>hit the upload button to upload for a particular location images</h4></li>
+            
+</ul>
+
+  </div>
+        
+</div>
+
+<!-- sugestion ends here-->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

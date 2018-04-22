@@ -1,0 +1,258 @@
+<html>
+<head>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="jquerycycle.js" type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<style>
+	.img
+	{
+		width: 100%;
+  height: auto;
+		display: block;
+		opacity: 1;
+		transition: .5s ease;
+  backface-visibility: hidden;
+	}
+	.text
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50px;
+	background-color: brown;
+	transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+	width: 100%;
+  height: 100%;
+	transition: .5s ease;
+	opacity: 0;
+}
+.img:hover 
+{
+	opacity: 0.4;
+}
+.text:hover{
+	opacity: 0.6;
+}
+ul li{
+	color: black;
+	text-align: justify;	
+	font-size: 17px;
+	line-height: 30px;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="animation.css">
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.f').cycle({
+        fx: 'fade' 
+    });
+});
+  $("#myCarousel").carousel();
+
+// Enable Carousel Indicators
+$(".item").click(function(){
+    $("#myCarousel").carousel(1);
+});
+
+// Enable Carousel Controls
+$(".left").click(function(){
+    $("#myCarousel").carousel("prev");
+});
+
+   $('#myBtn').click(function() {
+    $('html, body').animate({
+        scrollTop: $("#content").offset().top
+    }, 'slow');
+});
+</script>
+
+</head>
+
+<body id="top">
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <div class="navbar-header">
+		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	     
+	    </div>
+	  
+		  <!-- Navigation Menu -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav " style="color: white; !important;">
+		        <li><a href="" style="color: white;">Home<span class="sr-only">(current)</span></a></li>
+		       <!--  <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: white;"">Surveys<span class="caret"></span></a>
+		          <ul class="dropdown-menu hover-dark dropdown-menu-right">
+		          	
+		            <li><a href="">View </a></li>
+					<li><a href="">Add Survey</a></li>
+		          </ul>
+		        </li> -->
+		        <li><a href="sus_dev.html" style="color: white"; >Sus. Development</a></li>
+				<!-- <li><a href="ourwork.html" style="color: white"; >Public Awareness</a></li> -->
+		        <li><a href="geotag/geo.html" style="color: white"; >Geotag</a></li>
+		        <li><a href="#" style="color: white"; >Login</a></li>
+		   
+		        <li><a href="\hackerthon project\views\signup.ejs" style="color: white;">Sign up</a></li>
+	      	</ul>
+	      	<!--ul class="nav navbar-nav navbar-right">
+        	<li><a href="" class="btn" target="_blank"><i class="fa fa-sign-in"></i> Login</a></li>
+        	</ul-->
+	      </div>
+	      <!-- Navigation Menu Ends-->
+		  <img src="undp.PNG"  width="150" style="border-radius: 10px; opacity: 0.7;"><br>
+		<!-- <p style="color:green; font-size: 18px; font-weight: bold; "> &nbsp &nbsp FootPrint</p><br><br> -->
+      </div>
+	</nav>
+	<div class="blank-div"></div>
+	
+	<div class="slider">
+		<div id="myCarousel" class="carousel slide carousel-fade">
+		  <div class="carousel-inner">
+			    
+			    <div class="item active">
+			      <div class="fill" style="background-image:url('2.jpg');">
+			        <div class="container">
+					
+			           <div class="carousel-caption">
+
+			            	    <p>Nature<br>
+													<i id="myBtn" class="fa fa-angle-double-down animated" style="color:red;"></i><i class="chevron bottom"></i>
+			            	    </p>
+			            	    
+			            </div>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="item">
+			      <div class="fill" style="background-image:url('1.jpg');">
+			        <div class="container">
+			         <div class="carousel-caption">
+			          <p>Environment<br>
+          	    	<i id="myBtn" class="fa fa-angle-double-down animated" style="color:red;"></i>
+          	    </p>
+          	    </div>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="item">
+			      <div class="fill" style="background-image:url('3.png');">
+			        <div class="container">
+			         <div class="carousel-caption">
+				          <p>Pollution<br>
+	            	    <i id="myBtn" class="fa fa-angle-double-down animated" style="color:red;"></i>
+	          	    </p>
+          	    </div>
+			        </div>
+			      </div>
+			    </div>
+			  
+		  	</div>
+			  <div class="pull-center">
+				<a class="carousel-control left" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span></a>
+				<a class="carousel-control right" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span></a>
+			  </div>
+			  
+	</div>
+	<div class="container"  id="content" style="background: white; width: 85%; " ><div style="margin: 20px;">
+      <p style="color: green; font-size: 25px;">CONTENT</p><br><p style="font-size: 17px; width: 95%; text-align: justify; line-height: 30px;">Within the various uses of the word today, "nature" often refers to geology and wildlife. Nature can refer to the general realm of living plants and animals, and in some cases to the processes associated with inanimate objects–the way that particular types of things exist and change of their own accord, such as the weather and geology of the Earth. It is often taken to mean the "natural environment" or wilderness–wild animals, rocks, forest, and in general those things that have not been substantially altered by human intervention, or which persist despite human intervention. For example, manufactured objects and human interaction generally are not considered part of nature, unless qualified as, for example, "human nature" or "the whole of nature". This more traditional concept of natural things which can still be found today implies a distinction between the natural and the artificial, with the artificial being understood as that which has been brought into being by a human consciousness or a human mind. Depending on the particular context, the term "natural" might also be distinguished from the unnatural or the supernatural.</p>
+    </div>
+      <p>VISION</p><br><br><br><br></div>
+
+      <div class="container" style="color:black;">
+				<div class="row">
+					<div class="col-sm-12 col-lg-4 col-md-4"  data-aos="fade-down" >
+							<div class="img-responsive"  >  <img class="img" src="waste.jpg"  style="width:100%;height:50%;"/>
+								<div class="text" style="" > <p style=" color:azure;  font-size: 25px; position: absolute; top: 40%; left: 20%;"> Waste management</p> </div> 
+							</div>
+					</div>
+					<div class="col-sm-12 col-lg-4 col-md-4" data-aos="fade-up" >
+							<div class="img-responsive" >  <img class="img" src="waste1.jpg"  style="width:100%;height:50%;"/>
+								<div class="text" > <p style=" color:azure;  font-size: 25px; position: absolute; top: 40%; left: 20%;">Yes a true story</p> </div>
+							
+							</div>
+					</div>
+					<div class="col-sm-12 col-lg-4 col-md-4" data-aos="fade-down" >
+							<div class="img-responsive" >  <img class="img" src="waste2.jpg"  style="width:100%;height:50%;"/>
+								<div class="text" > <p style=" color:azure;  font-size: 25px; position: absolute; top: 40%; left: 20%;">To be stictly followed </p>
+							</div>
+				    	</div>
+				 </div>
+			</div>
+			</div>
+
+
+<br><br>
+<p style="font-weight:bold; font-size:26px; margin-top:4px; margin-left:4%;"><u> 3 R's Tips:</u></p><br><br>
+<div class="container">
+	<ul>
+		<li data-aos="fade-left">
+			Avoid the use of disposable goods such as lighters, paper cups and plastics. Throwing these objects contribute to greater problems and they have to be replaced over and over again.
+			 Once these goods are disposed off in the landfills, there is the probability that they may form breeding sites for diseases. Besides, once these materials are used there is need to replace them each time which is very expensive and costly.
+		</li><br>
+		<li data-aos="fade-left">
+			 Purchase products made from recycled materials. A product that has the recycled symbol means that either it has been made from recycled material or it can be recycled. This is common in plastics that have this recycling symbol usually with a numbered code which shows the type of plastic resin that this container really is made of. Recycled timber can be used for functions such as making furniture.
+			</li>
+			<br>
+			<li data-aos="fade-left">
+			 Use cloth bags when buying groceries or reuse grocery bags. Only take a bag from the grocery store if you need it.
+			</li><br>
+			<li data-aos="fade-left">
+			Instead of using plastic wraps use resalable containers. When the plastic bags are used once there is need to acquire new ones over and over again however resalable containers can be used only once and reused. This cuts on costs a lot.
+			</li><br>
+			<li data-aos="fade-left">
+			Donate to charity or sell old clothes, furniture, toys or appliances. Most especially, the furniture can be sold in garage ads and sales. There are times when one needs to change their furniture.
+			Instead of throwing away this furniture which can be useful to another person, it can instead be sold to those willing to buy or donated to various institutions or individuals who require them most.
+			</li><br>
+			<li data-aos="fade-left">
+			Instead of using paper cups or bottled water, use coffee mugs or personal water bottle. The coffee mugs and personal water bottles are portable and can be reused every time. However the plastic cups/bottled water have to be thrown away after each use thus increasing the amount of waste to be disposed off.
+			</li><br>
+			<li  data-aos="fade-left">
+			Adopt the use of recycled paper for copier paper, letterhead and newsletters. With recycled paper there is reduced waste, they are cheaper, and are even with high quality.
+			
+			</li><br>
+			<li data-aos="fade-left">Ensure you buy products in bulk. Purchasing products in large quantities or economy sized ones usually use less packaging and even cost less per amount. Once a person purchases goods in bulk it will take long before they buy new ones. Besides, lee packaging will be used as it is only packaged once.
+			</li><br>
+				<li data-aos="fade-left">
+				Avoid those goods that are over packaged. There are some goods that are packed with so much material such as plastic, foil and paper. While these materials may be best for their use one has to pay more for these packages which is so expensive.
+			</li><br>
+			<li data-aos="fade-left">
+				Encourage people to buy products that are made from material which is collected particularly for recycling from the community. If the community has decided to recycle some objects so that they can be reused by people, it is right that people are informed about these products to increase their awareness about these products and use them more.
+			</li><br>
+				
+				</ul></div>
+
+
+				
+
+			
+
+				
+			<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+			<script>
+					AOS.init();
+				</script>
+</body>
+</html>
